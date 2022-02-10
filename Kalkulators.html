@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <head>
+        <title>Kalkulators</title>
+    </head>
+
+<body>
+<h2>Kalkulators</h2>
+<input type="text" id="myInput1">
+<button type="button" onclick="skait();">+</button>
+<button type="button" onclick="atnemt();">-</button>
+<button type="button" onclick="reizinat();">*</button>
+<button type="button" onclick="dalit();">/</button>
+<input type="text" id="myInput2"><br>
+<p>Rezultāts:</p>
+<p id="output"></p>
+
+<script>
+    function skait() {
+        var x = document.getElementById("myInput1").value;
+        var y = document.getElementById("myInput2").value;
+        var x = parseFloat(x)
+        var y = parseFloat(y)
+        var z = x+y
+        text = `${x} + ${y} = ${z}`
+        document.getElementById("output").innerHTML = text
+    }
+
+    function atnemt() {
+        var x = document.getElementById("myInput1").value;
+        var y = document.getElementById("myInput2").value;
+        var x = parseFloat(x)
+        var y = parseFloat(y)
+        var z = x-y
+        text = `${x} - ${y} = ${z}`
+        document.getElementById("output").innerHTML = text
+    }
+
+    function reizinat() {
+        var x = document.getElementById("myInput1").value;
+        var y = document.getElementById("myInput2").value;
+        var x = parseFloat(x)
+        var y = parseFloat(y)
+        var z = x*y
+        text = `${x} * ${y} = ${z}`
+        document.getElementById("output").innerHTML = text
+    }
+
+    function dalit() {
+        var x = document.getElementById("myInput1").value;
+        var y = document.getElementById("myInput2").value;
+        var x = parseFloat(x)
+        var y = parseFloat(y)
+        var z = x/y
+        text = `${x} / ${y} = ${z}`
+        document.getElementById("output").innerHTML = text
+    }
+</script>
+
+</body>
+</html>
